@@ -7,8 +7,10 @@ function initialSetUp(){
     const itemLogo = document.createElement("li");
     const itemAbout = document.createElement("li");
     const linkMenu = document.createElement("a");
+    linkMenu.setAttribute("id","linkMenu");
     const headingMenu = document.createElement("h1");
     const linkAbout = document.createElement("a");
+    linkAbout.setAttribute("id","linkAbout");
     const info = document.createElement("main");
     const footer = document.createElement("footer");
 
