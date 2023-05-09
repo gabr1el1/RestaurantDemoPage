@@ -1,9 +1,16 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --main-red: rgb(222, 50, 50);
+    --main-green: rgb(0, 99, 65);
+    --secondary-green: greenyellow;
 }
 body,html{
     min-height: 100vh;
+    min-width: 100vw;
 }
 body{
     display: flex;
@@ -41,7 +48,7 @@ header h1{
 
 header :not(h1){
     font-size: 3vw;
-    color: greenyellow;
+    color: var(--secondary-green);
 }
 
 header li a{
@@ -64,11 +71,30 @@ header ul{
 }
 main{
     flex: 1;
-    padding: 20px 25px;
+    padding: 10px;
+}
+.about{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about > *{
+    flex: 1;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.465);
+    max-width: 100%;
+}
+
+.info{
+    background: var(--main-green);
+    color: white;
+    border: thick double var(--main-red);
+    padding-left: 10px;
+    border-radius: 10px;
 }
 footer{
     padding: 10px;
-    background-color: greenyellow;
+    background-color: rgba(128, 128, 128, 0.417);
     color: white;
     display: flex;
     justify-content: center;
