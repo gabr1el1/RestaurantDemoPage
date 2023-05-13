@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    user-select: none;
 }
 :root{
     --main-red: rgb(222, 50, 50);
@@ -34,7 +35,7 @@ header{
     display: flex;
     align-items: center;
     background-color: rgb(222, 50, 50);
-    user-select: none;
+    border: thick double var(--main-green);
 }
 
 header li{
@@ -60,6 +61,7 @@ header li a{
 
 header li a:hover{
     top: -5px;
+    color: white;
 }
 
 header ul{
@@ -82,15 +84,68 @@ main{
 .about > *{
     flex: 1;
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.465);
-    max-width: 100%;
+    min-width: 450px;
+    
 }
 
 .info{
     background: var(--main-green);
     color: white;
     border: thick double var(--main-red);
-    padding-left: 10px;
+    padding: 10px;
     border-radius: 10px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.socials{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+.socials img{
+    width: 1.5rem;
+    fill: white;
+}
+
+.socials li{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.menu > div{
+    background: rgba(211, 211, 211, 0.924);
+    border-radius: 5px;
+    padding: 10px;
+    border: thick double var(--main-red);
+    height: min-content;
+}
+
+.item-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s ease;
+    padding: 15px;
+}
+
+.item-menu:hover{
+    background: grey;
+}
+.item-menu > img{
+    width: 80%;
+}
+
+p::first-line{
+    line-height: 0;
 }
 footer{
     padding: 10px;
