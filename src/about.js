@@ -1,10 +1,5 @@
-import fbIcon from './images/facebook.svg';
-import twIcon from './images/twitter.svg';
-import ytIcon from './images/youtube.svg';
-import tkIcon from './images/tiktok.svg';
+import './styles.css';
 function aboutComponent(){
-    
-
 
     const main = document.querySelector("main");
     main.innerHTML = "";
@@ -21,7 +16,6 @@ function aboutComponent(){
     titleCopy.innerText = "Who are we?";
     const paragCopy = document.createElement("p");
     paragCopy.innerText = `
-
     Welcome to our tacos restaurant, 
     
     Our tacos are a true work of art, made with your choice of juicy meat or fresh vegetables, and topped with a variety of flavorful and colorful toppings. From the classic carne asada to the spicy and tangy al pastor, our tacos are sure to satisfy your cravings and leave you wanting more.
@@ -29,32 +23,34 @@ function aboutComponent(){
     Come visit us today and experience the joy of authentic Mexican cuisine. Our friendly staff is ready to welcome you with open arms and show you what makes our restaurant so wonderful. We can't wait to serve you!`;
     const contact = document.createElement("div");
     const contactTitle = document.createElement("h1");
-    contactTitle.innerText = "Contac Us";
+    contactTitle.innerText = "Contact Us";
     const socials = document.createElement("ul");
     socials.classList.add("socials");
-    const facebook = document.createElement("li");
-    const facebookIcon = new Image();
-    facebookIcon.src = fbIcon;
-    facebook.appendChild(facebookIcon);
-    socials.appendChild(facebook);
+    
 
     const twitter = document.createElement("li");
-    const twitterIcon = new Image();
-    twitterIcon.src = twIcon;
-    twitter.appendChild(twitterIcon);
-    socials.appendChild(twitter);
+    twitter.innerHTML = "<a href='#'><i class='fa-brands fa-twitter fa-xl'></i></a>";
 
-    const youtube = document.createElement("li");
-    const youtubeIcon = new Image();
-    youtubeIcon.src = ytIcon;
-    youtube.appendChild(youtubeIcon);
-    socials.appendChild(youtube);
+    const facebook = document.createElement("li");
+    facebook.innerHTML = "<a href='#'><i class='fa-brands fa-facebook fa-xl'></i></a>";
+    
 
     const tiktok = document.createElement("li");
-    const tiktokIcon = new Image();
-    tiktokIcon.src = tkIcon;
-    tiktok.appendChild(tiktokIcon);
+    tiktok.innerHTML = "<a href='#'><i class='fa-brands fa-tiktok fa-xl'></i></a>";
+
+    const youtube = document.createElement("li");
+    youtube.innerHTML = "<a href='#'><i class='fa-brands fa-youtube fa-xl'></i></a>";
+
+    const whatsapp = document.createElement("li");
+    whatsapp.innerHTML = "<a href='#'><i class='fa-brands fa-whatsapp fa-xl'></i></a>";
+
+
+    socials.appendChild(twitter);
+    socials.appendChild(facebook);
     socials.appendChild(tiktok);
+    socials.appendChild(youtube);
+    socials.appendChild(whatsapp);
+
 
     copy.appendChild(titleCopy);
     copy.appendChild(paragCopy);

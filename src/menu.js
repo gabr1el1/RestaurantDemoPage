@@ -7,7 +7,7 @@ import horchata from './images/menu/horchata.jpg';
 import jamaica from './images/menu/jamaica.jpg';
 import arrozConLeche from './images/menu/arroz-con-leche.jpg';
 import jericalla from './images/menu/jericalla.jpg';
-
+import './styles.css';
 function menuComponent(){
     const main = document.querySelector("main");
     main.innerHTML = "";
@@ -65,9 +65,9 @@ function loadToCategory(category, listItems){
     listItems.forEach(element => {
         const item = document.createElement("div");
         const html = 
-        `<h2>${element.name}</h2>
-        <img src=${element.imageURL}>
-        <p>$${element.price}</p>`;
+        `<div><h2>${element.name}</h2></div>
+        <div><img src=${element.imageURL}></div>
+        <div> <p>$${element.price}</p></div>`;
         item.innerHTML = html;
         item.classList.add("item-menu");
         category.appendChild(item);
